@@ -1,0 +1,4 @@
+INSERT into PESSOAS values
+(DEFAULT,'Monica', '1984-01-02', 'M', '78.5', '1.83', 'Brasil'),
+(DEFAULT,'Ana', '1984-01-02', 'M', '78.5', '1.83', 'Brasil'),
+(DEFAULT,'João', '1984-01-06, 'M', '78.5', '1.83', 'Brasil');

@@ -1,3 +1,13 @@
 UPDATE cursos 
 set nome = 'html5'
 WHERE idcurso = '1';
+
+UPDATE cursos 
+set nome = 'PHP', ano = '2015'
+WHERE idcurso = '4';
+
+UPDATE cursos 
+set ano = '2018', carga = '0'
+WHERE ano = '2050'
+LIMIT 1;
+

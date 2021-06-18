@@ -1,0 +1,3 @@
+UPDATE cursos 
+set nome = 'html5'
+WHERE idcurso = '1';

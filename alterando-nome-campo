@@ -1,0 +1,2 @@
+alter table PESSOAS
+change column profissao prof varchar(20) not null default '';

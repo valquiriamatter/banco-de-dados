@@ -1,0 +1,6 @@
+DELETE from cursos 
+where idcurso = '8';
+
+DELETE from cursos 
+where ano = '2050'
+limit 2;

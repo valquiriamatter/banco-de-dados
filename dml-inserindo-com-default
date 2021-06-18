@@ -1,0 +1,3 @@
+INSERT into PESSOAS 
+(id, nome, nascimento, sexo, peso, altura, nacionalidade) values
+(default, 'José', ‘1984-01-02', 'M', '78.5', '1.83', default);

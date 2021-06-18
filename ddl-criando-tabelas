@@ -1,5 +1,4 @@
 CREATE TABLE PESSOAS(
-
 id int not null auto_increment,
 nome varchar(30) not null,
 nascimento date,
@@ -9,3 +8,12 @@ altura decimal(3,2),
 nacionalidade varchar(20) default 'Brasil',
 primary key(id)
 )default charset = utf8;
+
+
+CREATE table if not exists cursos( 
+nome varchar(30) not null unique,
+descricao text,
+carga int unsigned,
+totalaulas int,
+ano year default '2021'
+) default charset = utf8;

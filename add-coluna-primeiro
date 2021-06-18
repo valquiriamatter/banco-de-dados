@@ -1,0 +1,7 @@
+alter table PESSOAS
+add column codigo int first;
+
+or
+
+alter table PESSOAS
+add codigo int first;

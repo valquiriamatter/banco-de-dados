@@ -1,0 +1,2 @@
+INSERT into PESSOAS values
+(DEFAULT,'Fernanda', '1984-01-02, 'M', '78.5', '1.83', 'Brasil');

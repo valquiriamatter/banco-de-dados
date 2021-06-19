@@ -1,1 +1,25 @@
 select * FROM PESSOAS;
+
+SELECT * FROM cursos order by nome;
+
+SELECT * FROM cursos order by nome des; //decrescente
+
+SELECT nome, descricao, carga FROM cursos order by nome;
+
+SELECT nome, descricao, ano FROM cursos order by ano,nome;
+
+SELECT * FROM cursos WHERE ano = '2016' order by nome;
+
+SELECT * FROM cursos WHERE ano >= '2014' order by nome;
+
+SELECT nome, descricao FROM cursos WHERE ano >= '2014' order by nome;
+
+SELECT nome, descricao FROM cursos WHERE ano != '2014' order by nome;     or <>
+
+SELECT nome, ano FROM cursos WHERE ano BETWEEN 2000 and 2014 order by nome;
+
+SELECT nome, ano FROM cursos WHERE ano IN (2016, 2014) order by ano;
+
+SELECT * FROM cursos WHERE carga >35 and totalaulas <30;
+
+SELECT * FROM cursos WHERE carga >35 OR totalaulas <30;

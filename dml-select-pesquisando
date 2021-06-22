@@ -1,0 +1,57 @@
+select * FROM PESSOAS;
+
+SELECT * FROM cursos order by nome;
+
+SELECT * FROM cursos order by nome des; //decrescente
+
+SELECT nome, descricao, carga FROM cursos order by nome;
+
+SELECT nome, descricao, ano FROM cursos order by ano,nome;
+
+SELECT * FROM cursos WHERE ano = '2016' order by nome;
+
+SELECT * FROM cursos WHERE ano >= '2014' order by nome;
+
+SELECT nome, descricao FROM cursos WHERE ano >= '2014' order by nome;
+
+SELECT nome, descricao FROM cursos WHERE ano != '2014' order by nome;     or <>
+
+SELECT nome, ano FROM cursos WHERE ano BETWEEN 2000 and 2014 order by nome;
+
+SELECT nome, ano FROM cursos WHERE ano IN (2016, 2014) order by ano;
+
+SELECT * FROM cursos WHERE carga >35 and totalaulas <30;
+
+SELECT * FROM cursos WHERE carga >35 OR totalaulas <30;
+
+SELECT * FROM cursos WHERE nome LIKE 'p%';
+
+SELECT * FROM cursos WHERE nome LIKE '%a%'; // tem a
+
+SELECT * FROM cursos WHERE nome NOT LIKE '%a%'; //não tem a
+
+SELECT * FROM cursos WHERE nome NOT LIKE '%a_'; //tem a no meio e qualquer um caracter depois.
+
+SELECT DISTINCT nacionalidade from PESSOAS p; //elimina os repitidos 
+
+SELECT COUNT(*) FROM cursos c; //conta os registros
+
+SELECT MAX(carga) FROM cursos c; //ver o maior registro
+
+SELECT MAX(carga) FROM cursos c where ano = '2016'; //maior
+
+SELECT MIN(carga) FROM cursos c where ano = '2016'; //menor
+
+SELECT SUM(totalaulas) FROM cursos; //soma
+
+SELECT AVG(totalaulas) FROM cursos; //media
+
+SELECT carga from cursos c group by carga; //agrupando
+
+SELECT carga, COUNT(nome) from cursos c group by carga; //agrupando e mostrando quanto tem de cada um
+
+SELECT carga, COUNT(*) from cursos c group by carga; //contar todos
+
+SELECT carga, COUNT(*) from cursos c group by carga having COUNT(nome) > 3; //having só funciona junto com o grupo by
+
+SELECT carga, COUNT(*) from cursos c where ano > 2015 group by carga having carga >(SELECT AVG(carga) from cursos c2); //select que usa a media como filtro da pesquisa

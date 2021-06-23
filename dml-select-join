@@ -1,3 +1,25 @@
 SELECT PESSOAS.nome, cursos.nome 
 from PESSOAS join cursos  
 on cursos.idcurso = pessoas.cursoPreferido;
+
+SELECT PESSOAS.nome, cursos.nome 
+from PESSOAS join cursos  
+on cursos.idcurso = pessoas.cursoPreferido
+ORDER by PESSOAS.nome;
+
+SELECT p.nome, c.nome 
+from PESSOAS as p inner join cursos as c 
+on c.idcurso = p.cursoPreferido
+ORDER by p.nome;
+
+SELECT p.nome, c.nome 
+from PESSOAS as p left join cursos as c  //mostra a tabela da esquerda, mesmo alunos sem curso
+on c.idcurso = p.cursoPreferido
+ORDER by p.nome;
+
+SELECT p.nome, c.nome 
+from PESSOAS as p right join cursos as c //mostra a tabela da direita, mesmo curso sem alunos
+on c.idcurso = p.cursoPreferido
+ORDER by p.nome;
+
+

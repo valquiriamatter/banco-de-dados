@@ -22,4 +22,9 @@ from PESSOAS as p right join cursos as c //mostra a tabela da direita, mesmo cur
 on c.idcurso = p.cursoPreferido
 ORDER by p.nome;
 
+SELECT p.nome, c.nome FROM PESSOAS p
+join assiste a
+on p.id = a.idpessoas
+join cursos c
+on c.idcurso = a.idcurso;
 

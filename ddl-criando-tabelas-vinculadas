@@ -1,0 +1,11 @@
+CREATE table assiste(
+id int not null auto_increment,
+data date,
+idpessoas int, 
+idcurso int,
+primary key(id),
+foreign key (idpessoas) references pessoas(id),
+foreign key (idcurso) references cursos(idcurso)
+) default charset = utf8;
+
+

@@ -1,0 +1,3 @@
+alter table PESSOAS 
+add foreign key (cursoPreferido)
+references cursos(idcurso);
